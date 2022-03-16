@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #161623;
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#fff, #f00);
+    clip-path: circle(20% at right 70%);
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #fff);
+    clip-path: circle(20% at 10% 10%);
+}
+.contenido-main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.contenido-main::before{
+    content: '';
+    background: url(../IMG/pokedex.png);
+    background-size:cover;
+    width: 520px;
+    height: 520px;
+    position: absolute;
+}
+.contenido-main .contenido-tarjeta{
+    position: relative;
+    width: 240px;
+    height: 430px;
+    margin-top: 69px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.contenido-main .contenido-tarjeta .contenido{
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+.contenido-main .contenido-tarjeta .contenido h1{
+    text-transform: uppercase;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+}
+.contenido-main .contenido-tarjeta .contenido img{
+    z-index: 1;
+}
+.contenido-main .contenido-tarjeta .contenido h5{
+    font-size: 0.8em;
+    color: #fff;
+    font-weight: 300;
+}
+.contenido-main .contenido-tarjeta .contenido input{
+    margin: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    border: 1px solid #f00;
+}
+.contenido-main .contenido-tarjeta .contenido button{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+}
+.contenido-main .contenido-tarjeta .contenido button:hover{
+    color: black;
+    border-radius: 5px;
+    background: #d7d7d7;
+    box-shadow: inset -13px -13px 26px #bdbdbd,
+                inset 13px 13px 26px #f1f1f1;
+}
