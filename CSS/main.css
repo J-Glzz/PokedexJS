@@ -38,13 +38,14 @@ body::after{
     flex-wrap: wrap;
     z-index: 1;
 }
-.contenido-main::before{
+.contenido-main::after{
     content: '';
     background: url(../IMG/pokedex.png);
     background-size:cover;
     width: 520px;
     height: 520px;
     position: absolute;
+    z-index: -1;
 }
 .contenido-main .contenido-tarjeta{
     position: relative;
@@ -73,9 +74,10 @@ body::after{
     font-size: 2em;
     color: rgb(255, 255, 255);
     pointer-events: none;
+    z-index: -1;
 }
 .contenido-main .contenido-tarjeta .contenido img{
-    z-index: 1;
+    z-index: -1;
 }
 .contenido-main .contenido-tarjeta .contenido h5{
     font-size: 0.8em;
